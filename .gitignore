@@ -1,0 +1,12 @@
+!LICENSE.txt
+!packages.txt
+!requirements.txt
+
+venv/
+
+__pycache__/
+build/
+dist/
+
+*.json
+*.spec

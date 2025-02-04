@@ -1,0 +1,4 @@
+chardet
+humanize
+pyinstaller
+pyinstaller-hooks-contrib
