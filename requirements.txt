@@ -1,8 +1,9 @@
 altgraph==0.17.4
 chardet==5.2.0
-humanize==4.11.0
-packaging==24.2
+humanize==4.12.2
+packaging==25.0
 pefile==2023.2.7
-pyinstaller==6.11.1
-pyinstaller-hooks-contrib==2025.1
+pyinstaller==6.13.0
+pyinstaller-hooks-contrib==2025.3
 pywin32-ctypes==0.2.3
+setuptools==79.0.0

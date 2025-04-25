@@ -21,7 +21,7 @@ __version__ = wabbajack_cleaner.__version__
 if __name__ == "__main__":
     PyInstaller.__main__.run(
         [
-            "{}.py".format(wabbajack_cleaner._name_),
+            f"{wabbajack_cleaner._name_}.py",
             "--clean",
             "--noconfirm",
             "--onefile",

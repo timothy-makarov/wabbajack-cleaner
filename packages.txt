@@ -1,4 +1,4 @@
 chardet
 humanize
+xxhash
 pyinstaller
-pyinstaller-hooks-contrib

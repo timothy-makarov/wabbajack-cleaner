@@ -12,7 +12,7 @@ python -m venv venv
 
 Write-Host "Activating new virtual environment."
 
-.\venv\Scripts\Activate.ps1
+.\venv\Scripts\activate
 
 Write-Host "Updating pip."
 
