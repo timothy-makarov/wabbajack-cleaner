@@ -1,6 +1,6 @@
 $OutputEncoding = [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($False)
 
-Write-Host "Making virtual environment."
+Write-Host "Running Wabbajack Cleaner environment setup."
 
 Write-Host "Removing existing virtual environment directory."
 
@@ -18,13 +18,13 @@ Write-Host "Updating pip."
 
 python -m pip install --upgrade pip
 
-Write-Host "Installing package dependencies from .\packages.txt file."
+Write-Host "Installing dependencies from .\packages.txt file."
 
 pip install -r .\packages.txt
 
 Write-Host "New virtual environment is ready."
 
-Write-Host "Freezing installed packages."
+Write-Host "Freezing installed packages in .\requirements.txt file."
 
 pip freeze > .\requirements.txt
 
@@ -32,4 +32,4 @@ $requirements = get-content ".\requirements.txt"
 
 [System.IO.File]::WriteAllLines(".\requirements.txt", $requirements, $OutputEncoding)
 
-Write-Host "Installed package dependencies written to .\requirements.txt file."
+Write-Host "Installed dependencies written to .\requirements.txt file."
