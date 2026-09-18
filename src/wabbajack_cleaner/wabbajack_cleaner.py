@@ -1,36 +1,35 @@
 # Filename: wabbajack_cleaner.py
 # Author: Tim Makarov
 # Created: 2025-02-01
-# Description: Wabbajack Cleaner is a tool for cleaning downloaded mods directory.
+# Description: Wabbajack Cleaner is a tool for cleaning directories containing downloaded mods.
 
 
 __author__ = "Tim Makarov"
-__copyright__ = "Copyright 2025, Tim Makarov"
+__copyright__ = "© 2026 Tim Makarov"
 __credits__ = ["github.com/timothy-makarov"]
 __email__ = "timothy.makarov@gmail.com"
-__license__ = "GPL"
+__license__ = "GPLv3"
 __maintainer__ = "Tim Makarov"
 __status__ = "Prototype"
-__version__ = "0.3.0"
+__version__ = "1.0.0"
 
 
 import argparse
 import base64
-import chardet
 import configparser
-import humanize
 import io
 import json
 import logging
 import os
 import sys
-import xxhash
 import zipfile
-
 from datetime import datetime
 
+import chardet
+import humanize
+import xxhash
 
-_name_ = "wabbajack_cleaner"
+_name_ = "wabbajack-cleaner"
 
 
 class ModArchive:
@@ -404,21 +403,22 @@ def init_args():
 
     args = parser.parse_args()
 
-    if args.modlist_file is None:
-        logging.error("No modlist was specified: --modlist-file.")
-        sys.exit(1)
+    if args.version is None:
+        if args.modlist_file is None:
+            logging.error("No modlist was specified: --modlist-file.")
+            sys.exit(1)
 
-    if not os.path.exists(args.modlist_file):
-        logging.error(f"File was not found: {args.modlist_file}.")
-        sys.exit(1)
+        if not os.path.exists(args.modlist_file):
+            logging.error(f"File was not found: {args.modlist_file}.")
+            sys.exit(1)
 
-    if args.download_dir is None:
-        logging.error("No mod download directory was specified: --download-dir.")
-        sys.exit(1)
+        if args.download_dir is None:
+            logging.error("No mod download directory was specified: --download-dir.")
+            sys.exit(1)
 
-    if not os.path.exists(args.download_dir):
-        logging.error(f"Path does not exist: {args.download_dir}.")
-        sys.exit(1)
+        if not os.path.exists(args.download_dir):
+            logging.error(f"Path does not exist: {args.download_dir}.")
+            sys.exit(1)
 
     return args
 

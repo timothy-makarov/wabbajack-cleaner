@@ -1,0 +1,26 @@
+[project]
+name = "wabbajack-cleaner"
+version = "1.0.0"
+description = "Wabbajack Cleaner is an automated modlist cleaner that removes old Wabbajack archives from the downloads directory."
+readme = "README.md"
+authors = [
+    { name = "Tim Makarov", email = "timothy.makarov@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "chardet>=7.6.0",
+    "humanize>=4.16.0",
+    "xxhash>=4.0.1",
+]
+
+[project.scripts]
+wabbajack-cleaner = "wabbajack_cleaner.wabbajack_cleaner:main"
+
+[build-system]
+requires = ["uv_build>=0.12.12,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.22.3",
+]

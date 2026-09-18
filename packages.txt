@@ -1,4 +1,0 @@
-chardet
-humanize
-xxhash
-pyinstaller

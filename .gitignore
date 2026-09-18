@@ -1,8 +1,6 @@
 !LICENSE.txt
-!packages.txt
-!requirements.txt
 
-venv/
+.venv/
 
 __pycache__/
 build/
